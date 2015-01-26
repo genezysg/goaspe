@@ -6,6 +6,6 @@ import (
 )
 
 func init() {
-    beego.Router("/", &controllers.QuestionController{},"get:ListQuestions")
+    beego.Router("/", &controllers.QuestionController{},"get:ListQuestions;post:NewQuestion")
 		beego.Router("/:id:int",&controllers.QuestionController{},"get:FindById")
 }
